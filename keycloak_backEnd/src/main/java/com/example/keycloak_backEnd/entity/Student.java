@@ -3,8 +3,10 @@ package com.example.keycloak_backEnd.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Entity
-@Table(name = "student", schema = "keycloak_database")
+@Table(name = "user", schema = "keycloak_database")
 @Data
 public class Student {
     @Id
@@ -13,43 +15,43 @@ public class Student {
     private Long id;
 
     @Basic
-    @Column(name = "FIRSTNAME")
-    private String firstname;
+    @Column(name = "LAST_NAME")
+    private String lastName;
 
     @Basic
-    @Column(name = "LASTNAME")
-    private String lastname;
+    @Column(name = "FIRST_NAME")
+    private String firstName;
 
     @Basic
-    @Column(name = "ID")
-    private String school;
-
-    @Basic
-    @Column(name = "STUDENT_ID")
-    private String studentId;
+    @Column(name = "FULL_NAME")
+    private String fullName;
 
     @Basic
     @Column(name = "PIN")
     private String pin;
 
     @Basic
+    @Column(name = "SCHOOL")
+    private String school;
+
+    @Basic
+    @Column(name = "WORK")
+    private String work;
+
+    @Basic
+    @Column(name = "CODE")
+    private String code;
+
+    @Basic
     @Column(name = "DEPARTMENT")
     private String department;
 
     @Basic
-    @Column(name = "PHONE")
-    private String phone;
+    @Column(name = "CREDIT")
+    private Integer credit;
 
     @Basic
-    @Column(name = "FROM_OF_LEARNING")
-    private String fromOfLearning;
-
-    @Basic
-    @Column(name = "GENDER")
-    private String gender;
-
-    @Basic
-    @Column(name = "EMAIL")
-    private String email;
+    @Column(name = "AVERAGE_SCORE")
+    private BigDecimal averageScore;
 
 }
