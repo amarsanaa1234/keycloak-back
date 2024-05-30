@@ -4,12 +4,11 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Entity
-@Table(name = "student", schema = "keycloak_database")
+@Table(name = "teacher", schema = "keycloak_database")
 @Data
-public class Student {
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", insertable = false, updatable = false)
@@ -44,18 +43,6 @@ public class Student {
     private String code;
 
     @Basic
-    @Column(name = "DEPARTMENT")
-    private String department;
-
-    @Basic
-    @Column(name = "CREDIT")
-    private Integer credit;
-
-    @Basic
-    @Column(name = "AVERAGE_SCORE")
-    private BigDecimal averageScore;
-
-    @Basic
     @Column(name = "GENDER")
     private String gender;
 
@@ -70,11 +57,4 @@ public class Student {
     @Basic
     @Column(name = "PHONE")
     private Integer phone;
-
-    @Basic
-    @Column(name = "TEACHER_CODE")
-    private String teacherCode;
-
-    @Transient
-    private Teacher teacherList;
 }
