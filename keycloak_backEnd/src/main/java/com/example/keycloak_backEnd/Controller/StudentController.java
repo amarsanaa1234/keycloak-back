@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1")
+@RequestMapping("/v1")
 public class StudentController {
     @Autowired
     StudentService studentService;
 
-    @GetMapping("/hello-1")
+    @GetMapping("/helloFirst")
     public String hello() {
         return "Hello from Spring boot & Keycloak";
     }
